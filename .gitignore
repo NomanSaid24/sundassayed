@@ -1,0 +1,12 @@
+node_modules/
+site/
+snapshots/
+captures/
+tmp_assets/
+.codex-runtime/
+server.log
+server.err.log
+server-*.log
+server-*.err.log
+clone.log
+clone.err.log
