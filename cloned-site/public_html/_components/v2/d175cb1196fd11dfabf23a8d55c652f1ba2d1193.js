@@ -8848,6 +8848,38 @@ const wo = "#00B6B6", Ne = [0.22, 1, 0.36, 1], be = (e) => ({
   color: "#FFFFFF",
   textDecoration: "none"
 });
+const contactFooterCreditStyle = {
+  ...be(),
+  letterSpacing: "0.04em",
+  textTransform: "none",
+  textAlign: "center",
+  whiteSpace: "nowrap"
+};
+const contactFooterCreditLinkStyle = {
+  ...contactFooterCreditStyle,
+  textDecoration: "none"
+};
+function contactFooterCredit() {
+  return /* @__PURE__ */ p(
+    "span",
+    {
+      style: contactFooterCreditStyle,
+      children: [
+        "© 2026 Sundassayed - A site by ",
+        /* @__PURE__ */ s(
+          "a",
+          {
+            href: "http://techure.me/portfolio/",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            style: contactFooterCreditLinkStyle,
+            children: "Techure"
+          }
+        )
+      ]
+    }
+  );
+}
 function z0(e = 768) {
   const [t, i] = T(!1);
   return B(() => {
@@ -9002,6 +9034,22 @@ function E0() {
                     /* @__PURE__ */ s("a", { href: "#/legal/legal-notice", style: be(), children: f("contact.legal", a) })
                   ]
                 }
+              ),
+              n && /* @__PURE__ */ s(
+                w.div,
+                {
+                  initial: { opacity: 0 },
+                  animate: i ? { opacity: 1 } : {},
+                  transition: { duration: 1, delay: 0.72, ease: Ne },
+                  style: {
+                    display: "flex",
+                    justifyContent: "center",
+                    marginTop: "18px",
+                    position: "relative",
+                    zIndex: 10
+                  },
+                  children: contactFooterCredit()
+                }
               )
             ]
           }
@@ -9055,6 +9103,22 @@ function E0() {
                 ]
               }
             )
+          }
+        ),
+        !n && /* @__PURE__ */ s(
+          w.div,
+          {
+            initial: { opacity: 0 },
+            animate: i ? { opacity: 1 } : {},
+            transition: { duration: 1, delay: 0.6, ease: Ne },
+            style: {
+              position: "absolute",
+              bottom: "48px",
+              left: "50%",
+              translate: "-50% 0",
+              zIndex: 10
+            },
+            children: contactFooterCredit()
           }
         ),
         !n && /* @__PURE__ */ p(
@@ -10685,6 +10749,38 @@ const we = {
   color: "#FFFFFF",
   textDecoration: "none"
 };
+const footerCreditStyle = {
+  ...we,
+  letterSpacing: "0.04em",
+  textTransform: "none",
+  textAlign: "center",
+  whiteSpace: "nowrap"
+};
+const footerCreditLinkStyle = {
+  ...footerCreditStyle,
+  textDecoration: "none"
+};
+function footerCredit() {
+  return /* @__PURE__ */ p(
+    "span",
+    {
+      style: footerCreditStyle,
+      children: [
+        "© 2026 Sundassayed - A site by ",
+        /* @__PURE__ */ s(
+          "a",
+          {
+            href: "http://techure.me/portfolio/",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            style: footerCreditLinkStyle,
+            children: "Techure"
+          }
+        )
+      ]
+    }
+  );
+}
 function Ae() {
   const e = $0(), t = I(null), i = M(t, { once: !0, amount: 0.3 }), { lang: n } = V();
   return /* @__PURE__ */ s(
@@ -10740,6 +10836,7 @@ function Ae() {
                   ]
                 }
               ),
+              footerCredit(),
               /* @__PURE__ */ p(
                 "div",
                 {
@@ -10767,9 +10864,10 @@ function Ae() {
             animate: i ? { opacity: 1 } : {},
             transition: { duration: 0.8, ease: To },
             style: {
-              display: "flex",
+              display: "grid",
+              gridTemplateColumns: "1fr auto 1fr",
               alignItems: "center",
-              justifyContent: "space-between"
+              columnGap: "clamp(20px, 2.5vw, 40px)"
             },
             children: [
               /* @__PURE__ */ p(
@@ -10787,12 +10885,14 @@ function Ae() {
                   ]
                 }
               ),
+              footerCredit(),
               /* @__PURE__ */ p(
                 "div",
                 {
                   style: {
                     display: "flex",
                     alignItems: "center",
+                    justifyContent: "flex-end",
                     gap: "clamp(20px, 2.5vw, 40px)"
                   },
                   children: [
